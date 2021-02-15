@@ -4,7 +4,7 @@ import seedColors from "./seedColors";
 
 class App extends Component {
   render() {
-    return <Palette {...seedColors} />;
+    return <Palette {...seedColors[0]} />;
   }
 }
 
