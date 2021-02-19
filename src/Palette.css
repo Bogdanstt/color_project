@@ -5,16 +5,3 @@
   height: 90%;
 }
 
-.slider {
-  width: 340px;
-  margin: 0 10px;
-  display: inline-block;
-}
-
-.rc-slider-track {
-  background-color: white;
-}
-
-.rc-slider-handle {
-  height: 8px;
-}
