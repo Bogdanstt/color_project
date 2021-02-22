@@ -109,7 +109,7 @@ export default [
   {
     paletteName: "Flat UI Colors Aussie",
     id: "flat-ui-colors-aussie",
-    emoji: "🇦🇺",
+    emoji: "\u{1F998}",
     colors: [
       { name: "Beekeeper", color: "#f6e58d" },
       { name: "SpicedNectarine", color: "#ffbe76" },
