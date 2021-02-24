@@ -5,26 +5,28 @@ import Palette from "./Palette";
 import seedColors from "./seedColors";
 
 class App extends Component {
+  findPalette(id) {
+    return seedColors.find(function (palette) {
+      return palette.id === id;
+    });
+  }
   render() {
     return (
-      <div>
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => <h1>Palette list goes here!</h1>}
-          />
-          <Route
-            exact
-            path="/palette:id"
-            render={() => <h1>Individual palette</h1>}
-          />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" render={() => <h1>PALETTE LIST GOES HERE</h1>} />
+        <Route
+          exact
+          path="/palette/:id"
+          render={(routeProps) => (
+            <Palette
+              palette={generatePalette(
+                this.findPalette(routeProps.match.params.id)
+              )}
+            />
+          )}
+        />
+      </Switch>
     );
   }
 }
-
 export default App;
-
-this.props.
