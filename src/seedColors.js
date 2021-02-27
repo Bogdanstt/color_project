@@ -55,7 +55,7 @@ export default [
   {
     paletteName: "Flat UI Colors Dutch",
     id: "flat-ui-colors-dutch",
-    emoji: "🇳🇱",
+    emoji: "\u{1F1F3}\u{1F1F1}",
     colors: [
       { name: "Sunflower", color: "#FFC312" },
       { name: "Energos", color: "#C4E538" },
