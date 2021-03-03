@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ColorBox from "./ColorBox";
 import Navbar from "./Navbar";
-import "./Palette.css";
 import PaletteFooter from "./PaletteFooter";
+import "./Palette.css";
 
 class Palette extends Component {
   constructor(props) {
@@ -27,16 +27,15 @@ class Palette extends Component {
         key={color.id}
         moreUrl={`/palette/${id}/${color.id}`}
         showLink
-        showingAllColors
       />
     ));
-
     return (
       <div className="Palette">
         <Navbar
           level={level}
           changeLevel={this.changeLevel}
           handleChange={this.changeFormat}
+          showingAllColors
         />
         <div className="Palette-colors">{colorBoxes}</div>
         <PaletteFooter paletteName={paletteName} emoji={emoji} />
@@ -44,5 +43,4 @@ class Palette extends Component {
     );
   }
 }
-
 export default Palette;

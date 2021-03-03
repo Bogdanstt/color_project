@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
-import Slider from "rc-slider";
 import Snackbar from "@material-ui/core/Snackbar";
-import { IconButton } from "@material-ui/core";
+import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
+
+import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import "./Navbar.css";
 
@@ -16,37 +17,16 @@ class Navbar extends Component {
     this.handleFormatChange = this.handleFormatChange.bind(this);
     this.closeSnackbar = this.closeSnackbar.bind(this);
   }
-
-  handleFormatChange(evt) {
-    this.setState({ format: evt.target.value, open: true }, () => {
-      this.props.handleChange(this.state.format);
-    });
+  handleFormatChange(e) {
+    this.setState({ format: e.target.value, open: true });
+    this.props.handleChange(e.target.value);
   }
-
   closeSnackbar() {
     this.setState({ open: false });
   }
   render() {
     const { level, changeLevel, showingAllColors } = this.props;
     const { format } = this.state;
-    const railStyle = { height: "10px" };
-    const handleStyle = [
-      {
-        backgroundColor: "green",
-        outline: "none",
-        border: "2px solid green",
-        boxShadow: "none",
-        width: "15px",
-        height: "15px",
-        marginLeft: "-7px",
-        marginTop: "-2.75px",
-      },
-    ];
-    const trackStyle = [
-      {
-        backgroundColor: "transparent",
-      },
-    ];
     return (
       <header className="Navbar">
         <div className="logo">
@@ -62,19 +42,15 @@ class Navbar extends Component {
                 max={900}
                 step={100}
                 onAfterChange={changeLevel}
-                railStyle={railStyle}
-                handleStyle={handleStyle}
-                trackStyle={trackStyle}
               />
             </div>
           </div>
         )}
-
         <div className="select-container">
           <Select value={format} onChange={this.handleFormatChange}>
-            <MenuItem value={"hex"}>HEX - #1234ef</MenuItem>
-            <MenuItem value={"rgb"}>RGB - rgb(255,255,255)</MenuItem>
-            <MenuItem value={"rgba"}>RGBA - rgba(255,255,255,1.0)</MenuItem>
+            <MenuItem value="hex">HEX - #ffffff</MenuItem>
+            <MenuItem value="rgb">RGB - rgb(255,255,255)</MenuItem>
+            <MenuItem value="rgba">RGBA - rgba(255,255,255, 1.0)</MenuItem>
           </Select>
         </div>
         <Snackbar
@@ -83,7 +59,7 @@ class Navbar extends Component {
           autoHideDuration={3000}
           message={
             <span id="message-id">
-              Format changed to {format.toUpperCase()}
+              Format Changed To {format.toUpperCase()}
             </span>
           }
           ContentProps={{
@@ -94,6 +70,7 @@ class Navbar extends Component {
             <IconButton
               onClick={this.closeSnackbar}
               color="inherit"
+              key="close"
               aria-label="close"
             >
               <CloseIcon />
@@ -104,5 +81,4 @@ class Navbar extends Component {
     );
   }
 }
-
 export default Navbar;
