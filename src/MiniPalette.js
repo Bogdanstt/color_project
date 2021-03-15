@@ -1,5 +1,5 @@
 import React from "react";
-import { mergeClasses, withStyles } from "@material-ui/styles";
+import { withStyles } from "@material-ui/styles";
 
 const styles = {
   root: {
