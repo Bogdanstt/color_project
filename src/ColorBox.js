@@ -15,7 +15,7 @@ const styles = {
     position: "relative",
     cursor: "pointer",
     "&:hover button": {
-      opacity: 1,
+      opacity: "1",
     },
   },
   copyText: {
@@ -123,6 +123,7 @@ const styles = {
     transitionDelay: "0.3",
   },
 };
+
 class ColorBox extends Component {
   constructor(props) {
     super(props);
