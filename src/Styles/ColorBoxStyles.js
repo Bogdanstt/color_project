@@ -23,7 +23,9 @@ export default {
   },
   seeMore: {
     color: (props) =>
-      chroma(props.background).luminance() >= 0.7 ? "rgba(0,0,0,0.7)" : "white",
+      chroma(props.background).luminance() >= 0.07
+        ? "rgba(0,0,0,0.7)"
+        : "white",
     background: "rgba(255, 255, 255, 0.3)",
     position: "absolute",
     border: "none",
