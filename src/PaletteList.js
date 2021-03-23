@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import MiniPalette from "./MiniPalette";
 import styles from "./Styles/PaletteListStyles";
-import { withStyles } from "@material-ui/styles";
-
+import { withStyles } from "@material-ui/core/styles";
 
 class PaletteList extends Component {
   goToPalette(id) {
@@ -29,7 +28,6 @@ class PaletteList extends Component {
               />
             ))}
           </div>
-          
         </div>
       </div>
     );

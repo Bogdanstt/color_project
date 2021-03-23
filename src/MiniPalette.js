@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Styles/MiniPaletteStyles";
-import { withStyles } from "@material-ui/styles";
+import { withStyles } from "@material-ui/core/styles";
 
 function MiniPalette(props) {
   const { classes, emoji, paletteName, colors } = props;

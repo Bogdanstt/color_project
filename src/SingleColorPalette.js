@@ -4,7 +4,7 @@ import ColorBox from "./ColorBox";
 import Navbar from "./Navbar";
 import PaletteFooter from "./PaletteFooter";
 import styles from "./Styles/PaletteStyles";
-import { withStyles } from "@material-ui/styles";
+import { withStyles } from "@material-ui/core/styles";
 
 class SingleColorPalette extends Component {
   constructor(props) {
@@ -47,7 +47,6 @@ class SingleColorPalette extends Component {
           <div className={classes.goBack}>
             <Link to={`/palette/${id}`}>Go Back</Link>
           </div>
-          
         </div>
         <PaletteFooter paletteName={paletteName} emoji={emoji} />
       </div>

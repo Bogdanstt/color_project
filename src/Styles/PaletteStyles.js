@@ -1,4 +1,4 @@
-export default {
+const styles = {
   Palette: {
     height: "100vh",
     display: "flex",
@@ -9,15 +9,6 @@ export default {
     overflow: "hidden",
   },
 
-  Palette: {
-    height: "100vh",
-    display: "flex",
-    flexDirection: "column",
-  },
-  colors: {
-    height: "90%",
-    overflow: "hidden",
-  },
   goBack: {
     width: "20%",
     height: "50%",
@@ -49,3 +40,4 @@ export default {
     },
   },
 };
+export default styles;
