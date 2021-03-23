@@ -4,6 +4,7 @@ import MiniPalette from "./MiniPalette";
 import styles from "./Styles/PaletteListStyles";
 import { withStyles } from "@material-ui/styles";
 
+
 class PaletteList extends Component {
   goToPalette(id) {
     this.props.history.push(`/palette/${id}`);
@@ -28,6 +29,7 @@ class PaletteList extends Component {
               />
             ))}
           </div>
+          
         </div>
       </div>
     );

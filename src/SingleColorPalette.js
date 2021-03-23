@@ -47,6 +47,7 @@ class SingleColorPalette extends Component {
           <div className={classes.goBack}>
             <Link to={`/palette/${id}`}>Go Back</Link>
           </div>
+          
         </div>
         <PaletteFooter paletteName={paletteName} emoji={emoji} />
       </div>
