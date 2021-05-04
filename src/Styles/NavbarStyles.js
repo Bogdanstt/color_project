@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 const styles = {
   Navbar: {
     display: "flex",
@@ -18,6 +20,10 @@ const styles = {
     "& a": {
       textDecoration: "none",
       color: "black",
+    },
+    [sizes.down("xs")]: {
+      display: "none",
+      height: "10%",
     },
   },
 
@@ -40,6 +46,10 @@ const styles = {
       height: "13px",
       marginLeft: "-7px",
       marginTop: "-3px",
+    },
+    [sizes.down("md")]: {
+      width: "200%",
+      height: "10%",
     },
   },
   selectContainer: {
