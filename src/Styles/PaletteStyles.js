@@ -15,7 +15,7 @@ const styles = {
     height: "50%",
     margin: "0 auto",
     display: "inline-block",
-    marginBottom: "-3.5px",
+    marginBottom: "-5.8px",
     position: "relative",
     cursor: "pointer",
     opacity: "1",

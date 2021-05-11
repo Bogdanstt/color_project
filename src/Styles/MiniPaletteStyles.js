@@ -35,7 +35,7 @@ const styles = {
     display: "inline-block",
     margin: "0 auto",
     position: "relative",
-    marginBottom: "-3.9px",
+    marginBottom: "-4px",
   },
   deleteIcon: {
     color: "white",

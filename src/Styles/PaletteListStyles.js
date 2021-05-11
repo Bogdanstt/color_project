@@ -7,7 +7,7 @@ const styles = {
     },
     ".fade-exit-active": {
       opacity: 0,
-      transition: "opacity 500ms ease-out",
+      transition: "opacity 100ms ease-out",
     },
   },
   root: {
